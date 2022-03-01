@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #edece1;
+}
+.wrap{
+    max-width: 1200px;
+    margin: auto;
+}
+.wrap .timeline{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0;
+}
+.wrap .timeline li{
+    position: relative;
+    width: 50%;
+}
+.wrap .timeline li:nth-child(odd){
+    padding-right: 100px;
+}
+.wrap .timeline li:nth-child(even){
+    align-self: flex-end;
+    padding-left: 100px;
+}
+.wrap .timeline a{
+    position: relative;
+    display: block;
+    padding: 20px;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px #888;
+    background-color: #fff;
+}
+.wrap .timeline h2{
+    color: #333;
+    font-weight: 700;
+}
+.wrap .timeline p{
+    color: #666;
+    font-weight: 100;
+}
+.wrap .timeline a:hover{
+    background-color: #6fa5f6;
+}
+.wrap .timeline a:hover h2, .wrap .timeline a:hover p{
+    color: #fff;
+}
+.wrap .timeline li::before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background-color: #ccc;
+}
+.wrap .timeline li:nth-child(odd):before{
+    right: 0;
+}
+.wrap .timeline li:nth-child(even):before{
+    left: -1px;
+}
+.wrap .timeline li::after{
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #aaa;
+}
+.wrap .timeline li:nth-child(odd):after{
+    right: -5px;
+}
+.wrap .timeline li:nth-child(even):after{
+    left: -6px;
+}
+.wrap .timeline a::before{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #aaa;
+}
+.wrap li:nth-child(odd) a::before{
+    right: -100px;
+}
+.wrap li:nth-child(even) a::before{
+    left: -100px;
+}
